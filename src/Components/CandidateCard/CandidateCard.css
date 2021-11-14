@@ -1,0 +1,36 @@
+div.candidateBoxContainer {
+  border: 1px solid #000;
+  border-radius: 8px;
+  height: 5rem;
+  width: 11rem;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(169, 124, 211);
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  margin: 1rem;
+}
+section.imageSection {
+  min-height: auto;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+section.imageSection img {
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+div.candidateBoxContainer span {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,17 @@
+button.buttonContainer {
+  /* padding: 1rem; */
+  /* padding: 20px; */
+  margin: 0 5rem;
+  color: aliceblue;
+  cursor: pointer;
+  border-radius: 3px;
+  height: 2rem;
+  outline: none;
+  text-align: center;
+  justify-content: center;
+}
+
+button.buttonContainer span {
+  padding: 1.6rem;
+  font-size: 1rem;
+}
