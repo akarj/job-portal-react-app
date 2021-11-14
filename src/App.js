@@ -8,12 +8,14 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 function App() {
-  const [Data, setData] = useState({});
+  // const Data = "we";
+  const [Data, setData] = useState(null);
   useEffect(() => {
     (async () => {
       const data = await axios.get(
         "https://s3-ap-southeast-1.amazonaws.com/he-public-data/users49b8675.json"
       );
+      console.log(data.data);
       setData(data.data);
     })();
   }, []);

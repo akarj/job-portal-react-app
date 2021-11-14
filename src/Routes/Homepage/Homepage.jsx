@@ -4,11 +4,14 @@ import CandidateCard from "../../Components/CandidateCard/CandidateCard";
 import InputBox from "../../Components/InputBox/InputBox";
 import TitleBar from "../../Components/TitleBar/TitleBar";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../../Data/UserContext";
 const Homepage = () => {
+  const candidate = useContext(UserContext);
   return (
     <>
       <TitleBar />
-      {/* console.log(Data()); */}
+      console.log({candidate});
       <div className="homepageContainerDiv">
         <section className="inputbarSection">
           <InputBox />
