@@ -11,9 +11,11 @@ section {
 }
 
 section.buttonSection {
+  display: flex;
   flex-direction: row;
   height: 3rem;
-  /* background-color: aqua; */
+  width: 40%;
+  justify-content: space-around;
 }
 section.candidateCardSection {
   display: flex;

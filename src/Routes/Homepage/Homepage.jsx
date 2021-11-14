@@ -17,6 +17,7 @@ const Homepage = () => {
           <Link to={"/sortlisted"}>
             <Button bgColor="#5ce024" text="Sortlisted" />
           </Link>
+
           <Link to={"/rejected"}>
             <Button bgColor="#e04a24" text="Rejected" />
           </Link>

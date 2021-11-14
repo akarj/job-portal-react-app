@@ -4,15 +4,25 @@ import Homepage from "./Routes/Homepage/Homepage";
 import Rejected from "./Routes/Rejected/Rejected";
 import Sortlisted from "./Routes/Sortlisted/Sortlisted";
 import CandidateDetail from "./Routes/CandidateDetail/CandidateDetail";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function App() {
+  const [Data, setData] = useState({});
+  useEffect(() => {
+    (async () => {
+      const data = await axios.get(
+        "https://s3-ap-southeast-1.amazonaws.com/he-public-data/users49b8675.json"
+      );
+      setData(data.data);
+    })();
+  }, []);
   return (
     <div className="App">
       <Router>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/*" element={<CandidateDetail />} />
-          {/* </Route> */}
           <Route path="sortlisted" element={<Sortlisted />} />
           <Route path="rejected" element={<Rejected />} />
         </Routes>
