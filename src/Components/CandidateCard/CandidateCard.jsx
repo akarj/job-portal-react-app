@@ -2,14 +2,11 @@ import React, { useState } from "react";
 import "./CandidateCard.css";
 import { Link } from "react-router-dom";
 
-const CandidateCard = () => {
-  const [Candidate] = useState({
-    name: " abc",
-    Image: "https://source.unsplash.com/weekly?person",
-    id: 1,
-  });
+const CandidateCard = ({ person }) => {
+  const Candidate = person;
   return (
     <Link to={`${Candidate.id}`}>
+      {console.log(person, "card")}
       <div className="candidateBoxContainer">
         <section className="imageSection">
           <img src={Candidate.Image} alt={Candidate.name} />

@@ -7,11 +7,11 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../../Data/UserContext";
 const Homepage = () => {
-  const candidate = useContext(UserContext);
+  const { Data } = useContext(UserContext);
   return (
     <>
       <TitleBar />
-      console.log({candidate});
+      {console.log(Data, "Homepage")}
       <div className="homepageContainerDiv">
         <section className="inputbarSection">
           <InputBox />
@@ -25,14 +25,12 @@ const Homepage = () => {
             <Button bgColor="#e04a24" text="Rejected" />
           </Link>
         </section>
-        <section className="candidateCardSection">
-          <CandidateCard />
-          <CandidateCard />
-          <CandidateCard />
-          <CandidateCard />
-          <CandidateCard />
-          <CandidateCard />
-        </section>
+        <div className="candidateCardSection">
+          {Data &&
+            Data.map(person => (
+              <CandidateCard key={person.id} person={person} />
+            ))}
+        </div>
       </div>
     </>
   );
